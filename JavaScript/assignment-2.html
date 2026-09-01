@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function userDetails() {
+            let user = {
+                name: "Abes",
+                age: 21,
+                email: "abes@example.com",
+                password: "password123"
+            };
+            return user;
+        }
+
+        let u = prompt("Enter your name");
+        let p = prompt("Enter your password");
+
+        function checkUser(clbk, msg) {
+            const user = clbk();
+            if (user.name === u && user.password === p) {
+                console.log(msg);
+            }
+        }
+
+        checkUser(userDetails, "Hello World!");
+    </script>
+</body>
+
+</html>
