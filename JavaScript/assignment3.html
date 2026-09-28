@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking System</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 600px;
+            height: 600px;
+            padding: 20px;
+            background-color: #947e7e;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .user,
+        .bus {
+            width: 100%;
+            background-color: #805b5b;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .user_info,
+        .bus_info {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <header>
+            <img src="images.png" alt="logo" width="100" height="100">
+            <h1>BUS BOOKING SYSTEM</h1>
+        </header>
+
+        <form id="bookingForm">
+
+            <div class="user">
+                <h3>User Information</h3>
+            </div>
+
+            <div class="user_info">
+
+                <label>Name:</label>
+                <input type="text" id="name" required>
+                <br><br>
+
+                <label>Age:</label>
+                <input type="number" id="age" required>
+                <br><br>
+
+                <label>Adhar Number:</label>
+                <input type="text" id="adhar" required>
+                <br><br>
+
+                <label>City:</label>
+                <select id="city" required>
+                    <option value="">Select a city</option>
+                    <option value="city1">City 1</option>
+                    <option value="city2">City 2</option>
+                    <option value="city3">City 3</option>
+                </select>
+                <br><br>
+
+                <label>Journey Date:</label>
+                <input type="date" id="journey" required>
+                <br><br>
+
+            </div>
+
+            <div class="bus">
+                <h3>Bus Information</h3>
+            </div>
+
+            <div class="bus_info">
+
+                <label>Select Bus:</label>
+                <select id="bus" required>
+                    <option value="">Select a bus</option>
+                    <option value="bus1">Bus 1</option>
+                    <option value="bus2">Bus 2</option>
+                    <option value="bus3">Bus 3</option>
+                </select>
+                <br><br>
+
+                <label>Select Your Seats:</label>
+                <input type="number" id="seats" required>
+                <br><br>
+
+                <input type="button" value="Book Now" onclick="bookBus()">
+
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function bookBus() {
+
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let city = document.getElementById("city").value;
+            let bus = document.getElementById("bus").value;
+            let seats = document.getElementById("seats").value;
+
+            console.log(name);
+            console.log(age);
+            console.log(city);
+            console.log(bus);
+            console.log(seats);
+
+            alert("Booking Successful!");
+        }
+    </script>
+
+</body>
+
+</html>
